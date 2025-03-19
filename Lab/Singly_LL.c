@@ -138,7 +138,6 @@ void DEnd()
         return;
     }
 
-    // If there is only one node in the list
     if (head->next == NULL) 
     {
         free(head);
@@ -147,15 +146,14 @@ void DEnd()
         return;
     }
 
-    // Traverse to the second last node
     while (temp->next != NULL) 
     {
         prev = temp;
         temp = temp->next;
     }
 
-    prev->next = NULL; // Remove the last node
-    free(temp); // Free memory
+    prev->next = NULL;
+    free(temp);
     printf("Last node deleted successfully.\n");
 }
 
@@ -253,11 +251,11 @@ void main()
 					break;
 					
 			case 5:  printf("Enter the element to search: \n");
-                scanf("%d", &a);
-                Search(a);
-                break;
+                		scanf("%d", &a);
+                		Search(a);
+                		break;
       
-      case 6: DBegin();
+      			case 6: DBegin();
 				 break;
       
 			case 7: DEnd();
@@ -266,13 +264,13 @@ void main()
 			case 8: DMid();
 				break;
 
-      case 9: printf("Exiting....\n");
-              exit(0);
-              break;
+      			case 9: printf("Exiting....\n");
+              			exit(0);
+              			break;
       
-      default:
-                printf("Enter the choice Correctly\n");
-                break;
+      			default:
+                		printf("Enter the choice Correctly\n");
+                		break;
 		}
 		
 		
