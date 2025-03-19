@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 int top=-1, n;
 
 void push(int a[], int e)
@@ -33,7 +34,7 @@ void pop(int a[])
 	}
 }
 
-void peep(int a[])
+void peek(int a[])
 {
 	if(top==-1)
 	{
@@ -75,7 +76,7 @@ void main()
 	while(1)
 	{
 		int ch;
-		printf("\n\n1->Insert element \t2->Delete element \n3->Peep \t\t4->Display \n5->Exit\n");
+		printf("\n\n1->Insert element \t2->Delete element \n3->Peek \t\t4->Display \n5->Exit\n");
 		printf("\nEnter choice:\n");
 		scanf("%d",&ch);
 		switch(ch)
@@ -86,9 +87,12 @@ void main()
 			break; 
 			case 2: pop(a);
 			break;
-			case 3: peep(a);
+			case 3: peek(a);
 			break;
 			case 4: display(a);
+			break;
+			case 5: printf("Exiting...\n");
+				exit(0);
 			break;
 			default: printf("Enter the choice Correctly");
 		}
